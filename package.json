@@ -1,0 +1,26 @@
+{
+  "name": "react-languajes",
+  "version": "1.0.3",
+  "description": "",
+  "main": "dist/index.js",
+  "scripts": {
+    "build": "npx tsc"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/luis030821/react-languajes.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/luis030821/react-languajes/issues"
+  },
+  "homepage": "https://github.com/luis030821/react-languajes#readme",
+  "devDependencies": {
+    "typescript": "^4.9.4"
+  },
+  "dependencies": {
+    "@types/react": "^18.0.26",
+    "react": "^18.2.0"
+  }
+}
