@@ -1,5 +1,5 @@
-import React from "react";
-export declare const LocaleContext: React.Context<{
+/// <reference types="react" />
+export declare const LocaleContext: import("react").Context<{
     languaje: string;
 }>;
 declare function LocaleProvider({ children }: {
