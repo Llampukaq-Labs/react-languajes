@@ -1,20 +1,13 @@
 import { createContext, useEffect, useState } from "react";
+import { useLocalStorage } from "../hooks/useLocalStorage";
 export const LocaleContext = createContext({});
-function LocaleProvider({
-  children,
-  defaultLanguaje = "en",
-  order = ["es", "en"],
-}: {
-  children: any;
-  defaultLanguaje: string;
-  order: string[];
-}) {
-  const [languaje, setLanguaje] = useState(defaultLanguaje);
+function LocaleProvider({ children }: { children: any }) {
+  const [language, setLanguage] = useLocalStorage("language", "en");
   useEffect(() => {
-    setLanguaje(navigator.language.substring(0, 2));
+    setLanguage(navigator.language.substring(0, 2));
   }, []);
   return (
-    <LocaleContext.Provider value={{ languaje, order }}>
+    <LocaleContext.Provider value={{ language, setLanguage }}>
       {children}
     </LocaleContext.Provider>
   );

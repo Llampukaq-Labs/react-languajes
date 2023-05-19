@@ -1,4 +1,4 @@
 declare function useTranslate(): {
-    t: (...args: string[]) => any;
+    t: (es: string, en: string) => any;
 };
 export default useTranslate;
